@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+    
+}
+.first-page {
+    position: relative; /* Make the parent a containing block */
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg-music.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Create an overlay for the darkened effect */
+.first-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the darkness with opacity */
+    z-index: 1; /* Ensure it appears below the content */
+}
+
+/* Content inside the first-page container */
+.content {
+    position: relative; /* Place content above the overlay */
+    z-index: 2; /* Ensure content appears above the overlay */
+}
+
+/* Banner container styles */
+.banner-container {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 110px;
+}
+
+/* Main heading styles */
+.main-heading {
+    font-family: "Poppins", sans-serif;
+    color: #ffa500;
+    font-size: 115px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    line-height: 1.15em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.0.9); /* Optional shadow for better contrast */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    font-weight: bolder;
+    font-size: 30px;
+    color: #ffa500;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffa500 ; 
+    font-weight: bold;
+}
+
+.navbar .social-icons a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffa500; 
+    font-size: 20px;
+}
+.music-button {
+    margin-left: 560px;
+    margin-bottom: 480px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ffa500; /* Border color */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #000; /* Button background color */
+    color: #ffa500; /* Icon color */
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .music-button {
+        width: 60px; /* Reduce size on smaller screens */
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+.music-button:hover {
+    background-color: #ffa500; /* On hover, change background */
+    color: #000; /* On hover, change icon color */
+}
+.navbar-toggler {
+    border-color: #ffa500; /* Change border color of toggle button */
+}
+
+.navbar-toggler-icon {
+    background-image: none; /* Remove default Bootstrap icon */
+    color: #ffa500; /* Set the icon color */
+    font-size: 24px; /* Adjust size if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler-icon::before {
+    content: "\f0c9"; /* Font Awesome 'bars' icon */
+    font-family: "Font Awesome 5 Free"; /* Use Font Awesome for the icon */
+    font-weight: 900;
+}
+/* section 2*/
+
+.music-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+.artist-image img {
+    width: 100%;
+    height: auto;
+}
+
+.music-card-body {
+    padding: 20px;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #343a40;
+    text-align: center;
+}
+
+.top-hits-title {
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #6c757d;
+}
+
+.audio-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.audio-track:last-child {
+    margin-bottom: 0;
+}
+
+.track-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+    margin: 0;
+    flex: 1;
+}
+
+.audio-player {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+audio {
+    width: 100%;
+    max-width: 200px;
+}
+.topthree{
+    font-size: 30px;
+}
+.loadmore{
+    margin-left: 150px;
+}
+
+
+/* section 3*/
+
+.card-container {
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
